@@ -1,6 +1,13 @@
 import React from "react";
 import "./share.css";
-import { PermMedia, Label, Room, EmojiEmotions, Cancel } from "@material-ui/icons";
+import {
+  PermMedia,
+  Label,
+  Room,
+  EmojiEmotions,
+  Cancel,
+  Create,
+} from "@material-ui/icons";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { useRef } from "react";
@@ -68,14 +75,14 @@ function Share() {
         {file && (
           <div className="shareImgContainer">
             <img src={URL.createObjectURL(file)} alt="" className="shareImg" />
-            <Cancel className="shareCancelImg" onClick={()=>setFile(null)}/>
+            <Cancel className="shareCancelImg" onClick={() => setFile(null)} />
           </div>
         )}
         <form className="shareBottom" onSubmit={submitHandler}>
           <div className="shareOptions">
             <label htmlFor="file" className="shareOption">
               <PermMedia htmlColor="tomato" className="shareIcon" />
-              <span className="shareOptionText">Photo or Video</span>
+              <span className="shareOptionText">Photo/Video</span>
               <input
                 style={{ display: "none" }}
                 type="file"
@@ -92,13 +99,9 @@ function Share() {
               <Room htmlColor="green" className="shareIcon" />
               <span className="shareOptionText">Location</span>
             </div>
-            <div className="shareOption">
-              <EmojiEmotions htmlColor="gold" className="shareIcon" />
-              <span className="shareOptionText">Feelings</span>
-            </div>
           </div>
           <button className="shareButton" type="submit">
-            Share
+            <Create style={{ textAlign: "center" }} />
           </button>
         </form>
       </div>

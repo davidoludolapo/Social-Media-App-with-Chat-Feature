@@ -1,6 +1,6 @@
 import React from "react";
 import "./topbar.css";
-import { Search, Person, Chat, Notifications } from "@material-ui/icons";
+import { Search, Person, Chat, Notifications, Home, Timeline, KeyboardCapslock } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
@@ -17,20 +17,20 @@ function Topbar() {
         </Link>
       </div>
       <div className="topbarCenter">
-        <div className="searchBar">
+        {/* <div className="searchBar">
           <Search className="searchIcon" />
           <input
             placeholder="Search for friend, post or video"
             className="searchInput"
           />
-        </div>
+        </div> */}
       </div>
       <div className="topbarRight">
-        <div className="topbarLinks">
-          <span className="topbarLink">Homepage</span>
-          <span className="topbarLink">Timeline</span>
-        </div>
-        <div className="topbarIcons">
+        {/* <div className="topbarLinks">
+          <span className="topbarLink"><Home/></span>
+          <span className="topbarLink"><KeyboardCapslock/></span>
+        </div> */}
+        {/* <div className="topbarIcons">
           <div className="topbarIconItem">
             <Person />
             <span className="topbarIconBadge">1</span>
@@ -43,7 +43,7 @@ function Topbar() {
             <Notifications />
             <span className="topbarIconBadge">1</span>
           </div>
-        </div>
+        </div> */}
         <Link to={`/profile/${user.username}`}>
           <img
             src={

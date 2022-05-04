@@ -1,19 +1,18 @@
 .post {
   width: 100%;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.37);
-  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.37);
-  margin: 30px 0;
+  box-shadow: rgba(180, 180, 194, 0.2) 0px 7px 29px 0px;
 }
 
 .postWrapper {
-    padding: 10px;
+    padding: 20px;
 }
 
 .postTop{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .postTopLeft{
@@ -62,8 +61,8 @@
 }
 
 .likeIcon{
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     margin-right: 5px;
     cursor: pointer;
 }

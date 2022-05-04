@@ -16,7 +16,7 @@
 }
 ::-webkit-scrollbar-thumb {
     width: 5px;
-    background-color: rgb(170, 167, 167);
+    background-color: rgb(197, 191, 191);
 }
 
 .sidebarWrapper{
@@ -39,14 +39,21 @@
 
 .sidebarIcon{
     margin-right: 15px;
+    color: rgb(119, 91, 243);
 }
 
 .sidebarButton{
-    width: 150px;
+    width: 250px;
     border: none;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 2px;
     font-weight: 500;
+}
+
+.sidebarButton:hover{
+    background-color: red;
+    color: white;
+    transition: all 0.3s ease-in-out;
 }
 
 .sidebarHr{

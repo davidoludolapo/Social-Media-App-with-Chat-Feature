@@ -1,8 +1,8 @@
 .share {
   width: 100%;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.37);
-  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.37);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  height: 180px;
 }
 
 .shareWrapper{
@@ -36,6 +36,7 @@
 
 .shareHr{
     margin: 20px;
+    color: red;
 }
 
 .shareBottom{
@@ -68,13 +69,21 @@
 
 .shareButton{
     border: none;
-    padding: 7px;
-    border-radius: 5px;
-    background-color: green;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    /* width: 89px; */
+    border-radius: 50%;
+    background-color: blueviolet;
     font-weight: 500;
     color: white;
     margin-right: 20px;
     cursor: pointer;
+}
+
+.shareButton:hover{
+    background-color: rgb(79, 17, 138);
+    transition: all 0.8s ease-in-out;
 }
 
 .shareImgContainer{
