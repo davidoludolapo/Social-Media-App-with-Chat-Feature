@@ -17,33 +17,36 @@ function Topbar() {
         </Link>
       </div>
       <div className="topbarCenter">
-        {/* <div className="searchBar">
+        <div className="searchBar">
           <Search className="searchIcon" />
           <input
             placeholder="Search for friend, post or video"
             className="searchInput"
           />
-        </div> */}
+        </div>
       </div>
       <div className="topbarRight">
         {/* <div className="topbarLinks">
           <span className="topbarLink"><Home/></span>
           <span className="topbarLink"><KeyboardCapslock/></span>
         </div> */}
-        {/* <div className="topbarIcons">
-          <div className="topbarIconItem">
+        <div className="topbarIcons">
+          {/* <div className="topbarIconItem">
             <Person />
             <span className="topbarIconBadge">1</span>
-          </div>
+          </div> */}
+          <Link to="/messenger" style={{textDecoration: "none", color: "white"}}>
           <div className="topbarIconItem">
             <Chat />
-            <span className="topbarIconBadge">1</span>
+            <span className="topbarIconBadge"></span>
           </div>
-          <div className="topbarIconItem">
+
+          </Link>
+          {/* <div className="topbarIconItem">
             <Notifications />
             <span className="topbarIconBadge">1</span>
-          </div>
-        </div> */}
+          </div> */}
+        </div>
         <Link to={`/profile/${user.username}`}>
           <img
             src={

@@ -77,3 +77,13 @@
   /* text-align: center; */
   cursor: default;
 }
+
+textarea{
+  /* border: none; */
+  height: 30%;
+  border: 1px solid blueviolet;
+}
+
+textarea:focus{
+  outline: none;
+}

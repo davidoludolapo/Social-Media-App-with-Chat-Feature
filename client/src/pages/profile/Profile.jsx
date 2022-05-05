@@ -1,18 +1,15 @@
-import axios from "axios";
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-import Feed from "../../components/feed/Feed";
-import Leftbar from "../../components/leftbar/Leftbar";
-import Rightbar from "../../components/rightbar/Rightbar";
-import Topbar from "../../components/topbar/Topbar";
 import "./profile.css";
+import Topbar from "../../components/topbar/Topbar";
+import Leftbar from "../../components/leftbar/Leftbar";
+import Feed from "../../components/feed/Feed";
+import Rightbar from "../../components/rightbar/Rightbar";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import { useParams } from "react-router";
 
-function Profile() {
+export default function Profile() {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const [user, setUser] = useState({});
-  const params = useParams();
   const username = useParams().username;
 
   useEffect(() => {
@@ -28,12 +25,11 @@ function Profile() {
       <Topbar />
       <div className="profile">
         <Leftbar />
-
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">
               <img
-                className="proCoverImg"
+                className="profileCoverImg"
                 src={
                   user.coverPicture
                     ? PF + user.coverPicture
@@ -42,7 +38,7 @@ function Profile() {
                 alt=""
               />
               <img
-                className="proUserImg"
+                className="profileUserImg"
                 src={
                   user.profilePicture
                     ? PF + user.profilePicture
@@ -65,5 +61,3 @@ function Profile() {
     </>
   );
 }
-
-export default Profile;
